@@ -19,13 +19,10 @@ const Menu: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Ionic Photo Gallery</IonTitle>
+        <IonToolbar color={"success"}>
+          <IonTitle>My Photo Gallery</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>
-        <Link to="/"> Logout</Link>
-      </IonContent>
 
       <IonContent>
         <PhotoGallery photos={photos} deletePhoto={deletePhoto} />
@@ -35,6 +32,9 @@ const Menu: React.FC = () => {
             <IonIcon icon={camera}></IonIcon>
           </IonFabButton>
         </IonFab>
+        <IonTitle>
+          <Link to="/"> Logout</Link>
+        </IonTitle>
       </IonContent>
     </IonPage>
   );
